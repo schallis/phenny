@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-def deskbeer(phenny):
+def deskbeer(phenny, stuff):
 	phenny.say('Soon....')
 deskbeer.commands = ['deskbeer']
 deskbeer.example = '.deskbeer'
