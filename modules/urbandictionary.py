@@ -7,7 +7,7 @@ uri = 'http://www.urbandictionary.com/define.php?term=%s'
 
 def urbandictionary(word):
 	root = parse(uri % word).getroot()
-	return root.cssselect('.definition')[0].text
+	return ''.join([text for text in root.cssselect('.definition')[0].itertext()])
 
 def ub(phenny, input):
 	if not input.group(2):
