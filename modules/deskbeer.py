@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-def deskbeer(phenny, word):
+def deskbeer(phenny, input):
+    word = input.group(2)
     if word == 'when':
         phenny.say('Soon...')
     elif word == 'who':
