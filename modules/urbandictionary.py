@@ -7,7 +7,10 @@ uri = 'http://www.urbandictionary.com/define.php?term=%s'
 
 def urbandictionary(word):
 	root = parse(uri % word).getroot()
-	return ''.join([text for text in root.cssselect('.definition')[0].itertext()])
+	try:
+    	return ''.join([text for text in root.cssselect('.definition')[0].itertext()])
+    except IndexError:
+        return "I would tell you but I can't be arsed."
 
 def urb(phenny, input):
 	if not input.group(2):
