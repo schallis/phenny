@@ -6,6 +6,7 @@ def human_readable_time_left(current_time, deskbeer_time):
 	distance_in_time = current_time - deskbeer_time
 	distance_in_seconds = int(round(abs(distance_in_time.days * 86400 + distance_in_time.seconds)))
 	distance_in_minutes = int(round(distance_in_seconds/60))
+	include_seconds = True
 
 	if distance_in_minutes <= 1:
 		if include_seconds:
